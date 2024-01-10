@@ -157,3 +157,20 @@
  getDistance(p1: { x: number; y: number; }, p2: { x: number; y: number; }) {
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   }
+
+class Circle {
+  active: any;
+  radius: any;
+
+  constructor(private ctx: CanvasRenderingContext2D, private pos: { x: any; y: any; }, private rad: number, private color: string) {}
+
+  draw() {
+    if (!this.active) {
+      return;
+    }
+    this.ctx.beginPath();
+    this.ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+    this.ctx.fillStyle = 'rgba(156,217,249,' + this.active + ')';
+    this.ctx.fill();
+  }
+}
