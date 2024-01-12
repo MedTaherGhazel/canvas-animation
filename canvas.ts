@@ -96,7 +96,12 @@
     }
    }
 
-
+  scrollCheck() {
+    this.scrollY = window.scrollY || window.pageYOffset;
+    if (this.scrollY <= window.innerHeight) {
+     this.target.y += this.scrollY;
+    }
+   }
 
   resize() {
     this.width = window.innerWidth;
