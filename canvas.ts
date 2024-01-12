@@ -38,17 +38,6 @@
       }
     }
 
-    for (const p1 of this.points) {
-      const closest = [];
-      for (const p2 of this.points) {
-        if (!(p1 === p2)) {
-          let placed = false;
-          for (let k = 0; k < 5; k++) {
-            if (!placed) {
-              if (closest[k] === undefined) {
-                closest[k] = p2;
-                placed = true;
-              }
             }
           }
 
