@@ -70,7 +70,12 @@
       p.circle = c;
     }
   }
-
+  mouseMoveOn(e: MouseEvent) {
+    const posx = e.pageX || e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+    const posy =  e.clientY ;
+    this.target.x = posx;
+    this.target.y = posy;
+  }
   mouseMove(e: MouseEvent) {
     const posx = e.pageX || e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
     const posy =  e.clientY ;
